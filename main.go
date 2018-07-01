@@ -4,7 +4,8 @@ import "fmt"
 
 func main() {
 	var name string
-	fmt.Print("Hola Mundo en Go!!!!!")
-	fmt.Scanf("%s", &name)
-	fmt.Printf("Nuevamente Hola mundo!!! %s.  Excelente!", name)
+	fmt.Print("Ingresa tu nombre: ")
+	fmt.Scanf("%s", &name) //Solicita interaccion del usuario
+	fmt.Printf("Hola %s, bienvenido a go \n", name)
+	fmt.Print("Hola Mundo")
 }
