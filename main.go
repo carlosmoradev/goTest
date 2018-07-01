@@ -6,12 +6,9 @@ const helloWorld string = "Hola %s %s, bienvenido a go \n" //Se declara una cons
 const testConst = "Test"                                   //tambien se puede declarar la constante sin indicar el tipo de dato
 
 func main() {
-	var name string //Forma recomendada para declarar variables. Se especifica el tipo de dato
-	name = "Nombre" //se asigna el valor "Nombre" a la variable name.
-
 	lastName := "<Modificar con el apellido>" //forma corta de declarar variables, sin necesidad de declarar el tipo de dato
-
-	var number = 100 //otra forma de declarar variables sin tipo de dato, pues go automaticamente detecta que tipo de dato es.
+	name := getName()                         //Se declara la variable name llamandola desde la funcion getName()
+	var number = 100                          //otra forma de declarar variables sin tipo de dato, pues go automaticamente detecta que tipo de dato es.
 
 	var (
 		a = 1 //Forma de declarar multiples variables de manera simultanea.
@@ -19,13 +16,15 @@ func main() {
 		c = 3
 	)
 
-	fmt.Print("Ingresa tu nombre: ")
-	fmt.Scanf("%s", &name)                 //Solicita interaccion del usuario
 	fmt.Printf(helloWorld, name, lastName) //llama la constante helloWorld y recibe adicionalmente la variable lastName
 	fmt.Println("Hola Mundo")              //igual a fmt.Print pero con salto de linea al final
 	fmt.Println(number, a, b, c)
 }
 
 func getName() string { //Formato recomendado para declaracion de funciones.  func + nombreFuncion() + Lo que se espera devolver (en este caso, string)
-
+	var name string
+	name = "Nombre" //se asigna el valor "Nombre" a la variable name para poder reutilizarlo por medio de la funcion getName().
+	fmt.Print("Ingresa tu nombre: ")
+	fmt.Scanf("%s", &name) //Solicita interaccion del usuario
+	return name
 }
