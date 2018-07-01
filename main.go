@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+const helloWorld string = "Hola %s %s, bienvenido a go \n" //Se declara una constante indicando tipo de dato
+const testConst = "Test"                                   //tambien se puede declarar la constante sin indicar el tipo de dato
+
 func main() {
 	var name string //Forma recomendada para declarar variables. Se especifica el tipo de dato
 	name = "Nombre" //se asigna el valor "Nombre" a la variable name.
@@ -17,8 +20,8 @@ func main() {
 	)
 
 	fmt.Print("Ingresa tu nombre: ")
-	fmt.Scanf("%s", &name) //Solicita interaccion del usuario
-	fmt.Printf("Hola %s, bienvenido a go \n", name)
-	fmt.Println("Hola Mundo") //igual a fmt.Print pero con salto de linea al final
+	fmt.Scanf("%s", &name)                 //Solicita interaccion del usuario
+	fmt.Printf(helloWorld, name, lastName) //llama la constante helloWorld y recibe adicionalmente la variable lastName
+	fmt.Println("Hola Mundo")              //igual a fmt.Print pero con salto de linea al final
 	fmt.Println(number, a, b, c)
 }
