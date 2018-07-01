@@ -20,4 +20,5 @@ func main() {
 	fmt.Scanf("%s", &name) //Solicita interaccion del usuario
 	fmt.Printf("Hola %s, bienvenido a go \n", name)
 	fmt.Println("Hola Mundo") //igual a fmt.Print pero con salto de linea al final
+	fmt.Println(number, a, b, c)
 }
