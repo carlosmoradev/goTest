@@ -25,3 +25,7 @@ func main() {
 	fmt.Println("Hola Mundo")              //igual a fmt.Print pero con salto de linea al final
 	fmt.Println(number, a, b, c)
 }
+
+func getName() string { //Formato recomendado para declaracion de funciones.  func + nombreFuncion() + Lo que se espera devolver (en este caso, string)
+
+}
