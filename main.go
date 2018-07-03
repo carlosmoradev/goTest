@@ -8,8 +8,8 @@ const testConst = "Test"                                   //tambien se puede de
 func main() {
 	lastName := "<Modificar con el apellido>" //forma corta de declarar variables, sin necesidad de declarar el tipo de dato
 	name := getName()                         //Se declara la variable name llamandola desde la funcion getName()
-	var number = 100                          //otra forma de declarar variables sin tipo de dato, pues go automaticamente detecta que tipo de dato es.
-
+	//var number = 100                          //otra forma de declarar variables sin tipo de dato, pues go automaticamente detecta que tipo de dato es.
+	number := sum(50, 50)
 	// var (
 	// 	a = 1 //Forma de declarar multiples variables de manera simultanea.
 	// 	b = 2
@@ -33,4 +33,8 @@ func getName() string { //Formato recomendado para declaracion de funciones.  fu
 
 func getVariables() (int, int, int) {
 	return 1, 2, 3
+}
+
+func sum(a int, b int) int {
+	return a + b
 }
