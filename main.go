@@ -10,11 +10,13 @@ func main() {
 	name := getName()                         //Se declara la variable name llamandola desde la funcion getName()
 	var number = 100                          //otra forma de declarar variables sin tipo de dato, pues go automaticamente detecta que tipo de dato es.
 
-	var (
-		a = 1 //Forma de declarar multiples variables de manera simultanea.
-		b = 2
-		c = 3
-	)
+	// var (
+	// 	a = 1 //Forma de declarar multiples variables de manera simultanea.
+	// 	b = 2
+	// 	c = 3
+	// )
+
+	a, b, c := getVariables()
 
 	fmt.Printf(helloWorld, name, lastName) //llama la constante helloWorld y recibe adicionalmente la variable lastName
 	fmt.Println("Hola Mundo")              //igual a fmt.Print pero con salto de linea al final
@@ -27,4 +29,8 @@ func getName() string { //Formato recomendado para declaracion de funciones.  fu
 	fmt.Print("Ingresa tu nombre: ")
 	fmt.Scanf("%s", &name) //Solicita interaccion del usuario
 	return name
+}
+
+func getVariables() (int, int, int) {
+	return 1, 2, 3
 }
