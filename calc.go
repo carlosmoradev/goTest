@@ -5,6 +5,6 @@ const (
 	inputB = "Second number Input"
 )
 
-func main() {
+func calculate() {
 
 }
